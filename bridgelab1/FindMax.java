@@ -1,7 +1,4 @@
 package bridgelab1;
-
-import java.util.Scanner;
-
 class FindMax<T extends Comparable<T>>
 {
     T[] number;
@@ -23,9 +20,13 @@ class TestMaximum
 {
     public static void main(String args[])
     {
-        Scanner sc = new Scanner(System.in);
-        Integer inums[]={10,2,5};
+        int i;
+        Integer inums[]={10,2,5,4,6,1};
+        Float f[]={2.2f,5.4f,1.6f,8.3f,4.6f,1.4f};
         FindMax<Integer> iob = new FindMax<>(inums);
-        System.out.println("Max value in Number: " + iob.max());
+        FindMax<Float>dob = new FindMax<Float>(f);
+        System.out.println("Max value in inums: " + iob.max());
+        System.out.println("Max value in float: " + dob.max());
+
     }
 }
